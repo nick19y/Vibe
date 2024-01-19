@@ -1,4 +1,4 @@
-let productsJson = [
+let productsJson = localStorage.setItem('products', JSON.stringify([
     {
         "id": 1,
         "name": "Camiseta básica",
@@ -59,4 +59,4 @@ let productsJson = [
         "price": 19.99,
         "image": "../img/chinelo.jpg",
       }
-]
+]))
