@@ -12,5 +12,28 @@ formAddProduct.addEventListener("submit", (evento)=>{
     }
     products.push(product);
     localStorage.setItem('products', JSON.stringify(products));
+    location.reload();
 })
 
+let profilePic = document.getElementById("profile-pic");
+let inputFile = document.getElementById("input-file");
+
+inputFile.addEventListener("change", function(){
+    const reader = new FileReader();
+
+    console.log(this.files);
+    reader.addEventListener("load", ()=>{
+        console.log(reader.result);
+        localStorage.setItem("recent-image", reader.result);
+    })
+
+    reader.readAsDataURL(this.files[0])
+})
+document.addEventListener("DOMContentLoaded", ()=>{
+    const recentImageDataURL = localStorage.getItem("recent-image");
+    if(recentImageDataURL){
+        profilePic.setAttribute("src", recentImageDataURL);
+    }
+    console.log("DOM fully loaded and parsed");
+    
+})
