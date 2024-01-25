@@ -42,11 +42,10 @@ formAddProduct.addEventListener("submit", (evento)=>{
     products.push(product);
     localStorage.setItem('products', JSON.stringify(products));
     location.reload();
-
-
-
     console.log(this.files);
     // this.files só funciona com o evento change e não o submit
+
+    localStorage.removeItem("recent-image");
 })
 
 
