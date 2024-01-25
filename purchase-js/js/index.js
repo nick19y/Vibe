@@ -42,7 +42,7 @@ function createShoppingCartElement(product){
 products.map((item)=>{
     let productItem = document.querySelector('.models .products .product').cloneNode(true);
     document.querySelector('.productArea').append(productItem);
-    productItem.querySelector('.product img').src = item.image;
+    productItem.querySelector('.product img').src = item.img;
     productItem.querySelector('.product .name').innerHTML = item.name;
     productItem.querySelector('.product .price').innerHTML =  `R$ ${item.price}`;
 
