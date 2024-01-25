@@ -8,21 +8,18 @@ let profilePic = document.getElementById("profile-pic");
 let inputFile = document.getElementById("input-file");
 
 
-function addItemImage(){
-    inputFile.addEventListener("change", function(){
-        const reader = new FileReader();
-        // leitor de arquivo
-        console.log(this.files[0]);
-        reader.addEventListener("load", ()=>{
-            localStorage.setItem("recent-image", reader.result);
-            // resultado do leitor de arquivo atribuído como uma strig ao localStorage
-        });
-        reader.readAsDataURL(this.files[0])
-        // leitor de arquivo "lendo" o arquivo como uma URL
+inputFile.addEventListener("change", function(){
+    const reader = new FileReader();
+    // leitor de arquivo
+    console.log(this.files[0]);
+    reader.addEventListener("load", ()=>{
+        localStorage.setItem("recent-image", reader.result);
+        // resultado do leitor de arquivo atribuído como uma strig ao localStorage
         console.log(reader.result);
-        return reader.result;
-    })
-}
+    });
+    reader.readAsDataURL(this.files[0])
+    // leitor de arquivo "lendo" o arquivo como uma URL
+})
 
 
 // usar esse código na hora de exibir a imagem
@@ -32,8 +29,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         profilePic.setAttribute("src", recentImageDataURL);
     }
 })
-let image = addItemImage();
-console.log(image);
 
 formAddProduct.addEventListener("submit", (evento)=>{
     evento.preventDefault();
@@ -42,7 +37,7 @@ formAddProduct.addEventListener("submit", (evento)=>{
     const product={
         name: inputName.value,
         price: inputPrice.value,
-        img: image,
+        img: localStorage.getItem("recent-image"),
     }
     products.push(product);
     localStorage.setItem('products', JSON.stringify(products));
