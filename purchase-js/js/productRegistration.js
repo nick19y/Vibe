@@ -30,9 +30,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
 })
 
-formAddProduct.addEventListener("submit", (evento)=>{
-    evento.preventDefault();
-
 formAddProduct.addEventListener("submit", (event)=>{
     event.preventDefault();
 
@@ -49,9 +46,3 @@ formAddProduct.addEventListener("submit", (event)=>{
 
     localStorage.removeItem("recent-image");
 })
-
-
-
-
-
-
