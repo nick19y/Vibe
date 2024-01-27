@@ -30,9 +30,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
 })
 
-formAddProduct.addEventListener("submit", (evento)=>{
-    evento.preventDefault();
-
+formAddProduct.addEventListener("submit", (event)=>{
+    event.preventDefault();
 
     const product={
         name: inputName.value,
