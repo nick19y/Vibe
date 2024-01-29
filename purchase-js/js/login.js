@@ -14,6 +14,11 @@ function checkUser(){
         if(userEmailLogin == user.email && userPasswordLogin == user.password){
             window.open('index.html', '_self');
         }
+        else{
+            document.write("Senha incorreta");
+            return;
+            // FAZER TRATAMENTO COM ID 
+        }
     })
 }
 

@@ -65,6 +65,13 @@ a:hover{
 .title{
     text-align: center;
 }
+.img-shopping-cart{
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 8px;
+    width: 120px;
+    height: 120px;
+}
 .shopping-list{
     position: fixed;
     top: 0;
@@ -73,6 +80,7 @@ a:hover{
     background-color: rgb(221, 221, 242, 0.95);
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .shopping-list.available{
     transform: translate(0);
@@ -81,20 +89,42 @@ a:hover{
     margin-top: 1.5em;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
 }
-
+.amount-btns{
+    display: flex;
+    height: 33px;
+    width: 4.4em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.2em;
+    margin-bottom: 6px;
+}
 .shopping-cart-item{
     display: flex;
-    width: 100%;
+    width: 97%;
+    height: 120px;
     align-items: center;
     justify-content: space-around;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
     color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding: 7px;
+}
+.item-list-li{
+    padding: 5px;
+    margin: 0 2px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .close-btn-item-list{
+    margin-top: 1em;
     height: 25px;
     width: 25px;
 }
@@ -105,6 +135,21 @@ a:hover{
     height: 30px;
     width: 30px;
     margin: 20px 0 0 20px;
+}
+.name-price{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+}
+.amount-close-btn{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
 }
 .alter-amount-btn{
     display: flex;
@@ -123,4 +168,12 @@ a:hover{
 .product-name{
     font-size: 15px;
     word-break: break-word;
+}
+.shopping-name{
+    color: rgb(141, 141, 141);
+    word-break: break-word;
+    font-size: 15px;
+}
+.shopping-price{
+    margin-bottom: 5px;
 }
