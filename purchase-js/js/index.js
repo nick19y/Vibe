@@ -68,3 +68,10 @@ shoppingCart.addEventListener('click', ()=>{
         createShoppingCartElement(product);
     })     
 })
+
+
+let exitBtn = document.querySelector(".exit-btn")
+exitBtn.addEventListener("click", ()=>{
+    sessionStorage.removeItem("logged-user")
+    window.open("login.html", "_self");
+})

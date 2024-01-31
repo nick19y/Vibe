@@ -12,7 +12,9 @@ function checkUser(){
     userPasswordLogin = userPassword.value;
     users.forEach((user) =>{
         if(userEmailLogin == user.email && userPasswordLogin == user.password){
+            sessionStorage.setItem("logged-user", JSON.stringify(user));
             window.open('index.html', '_self');
+            console.log(user);
         }
         else{
             document.write("Senha incorreta");
