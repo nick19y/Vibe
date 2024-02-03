@@ -172,7 +172,8 @@ a:hover{
 .shopping-name{
     color: rgb(141, 141, 141);
     word-break: break-word;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
 }
 .shopping-price{
     margin-bottom: 5px;
