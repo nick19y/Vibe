@@ -31,3 +31,8 @@ shoppingCart.addEventListener('click', ()=>{
         createShoppingCartElement(product);
     })     
 })
+
+const sendOrderBtn = document.querySelector(".send-order");
+sendOrderBtn.addEventListener("click", ()=>{
+    window.open("order.html", "_self");
+})
