@@ -1,0 +1,37 @@
+.profile-img-div{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-img{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+.user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.user-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1em;
+    gap: 1em;
+}
+.user-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px;
+}
+.user-item-text{
+    margin-top: 10px;
+}

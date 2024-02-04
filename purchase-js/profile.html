@@ -3,20 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/profiile.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/shopping-cart.js" defer></script>
+    <script src="js/hamburguer-menu.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="models">
+        <div class="products">
+            <div class="product">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="price"></div>
+                <button class="purchase-btn">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </div>
+    <aside class="shopping-list">
+        <img src="img/close-btn (2).png" alt="" class="close-btn-shopping-cart">
+        <ul class="shopping-list-ul">
+            <div class="item-list-li">
+            </div>
+        </ul>
+    </aside>
+    
+    <aside>
+        <nav>
+            <ul class="nav-list">
+                <div class="links">
+                    <img src="img/close-btn (2).png" alt="" class="close-btn-nav-list">
+                    <li><a href="profile.html">Conta</a></li>
+                    <li><a href="best-sellers.html">Mais Vendidos</a></li>
+                    <li><a href="offers.html">Ofertas</a></li>
+                </div>
+            </ul>
+        </nav>
+    </aside>
     <header>
-        <div class="profile-img">
-            <img src="" alt="">
+        <div class="menu">
+            <img src="img/hamburguer-menu.png" alt="">
+        </div>
+        <div class="title">
+            <h1 class="brand-title">VIBE</h1>
+            <h3>Urban Moda</h3>
+        </div>
+        <div class="shopping-cart">
+            <img src="img/shopping-cart.png" alt="" class="shopping-cart-img">
         </div>
     </header>
     <main>
-        <div class="account">Conta</div>
-        <div class="orders">Seus pedidos</div>
-        <div class="product-return">Devoluções</div>
-        <div class="customer-service">Atendimento ao cliente</div>
-        <div class="logout">Sair</div>
+        <div class="profile-img-div">
+            <div class="profile-img">
+                <img src="img/user.png" alt="">
+            </div>
+        </div>
+        <div class="user-name">
+            <h3>Nome Sobrenome Sobrenome Sobrenome</h3>
+        </div>
+        <div class="user-grid">
+            <div class="user-div">
+                <img src="img/lock.png" alt="">
+                <div class="user-item-text account">Alterar dados</div>
+            </div>
+            <div class="user-div">
+                <img src="img/shopping-bag.png" alt="">
+                <div class="user-item-text orders">Seus pedidos</div>
+            </div>
+            <div class="user-div">
+                <img src="img/devolucao-de-produto.png" alt="">
+                <div class="user-item-text product-return">Devoluções</div>
+            </div>
+            <div class="user-div">
+                <img src="img/telephone-call.png" alt="">
+                <div class="user-item-text customer-service">Atendimento ao cliente</div>
+            </div>
+            <div class="user-div">
+                <img src="img/list.png" alt="">
+                <div class="user-item-text list">Suas listas</div>
+            </div>
+            <div class="user-div">
+                <img src="img/logout.png" alt="">
+                <div class="user-item-text logout">Sair</div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

@@ -84,6 +84,7 @@ a:hover{
 }
 .shopping-list.available{
     transform: translate(0);
+    overflow-y: scroll;
 }
 .shopping-list-ul{
     margin-top: 1.5em;
