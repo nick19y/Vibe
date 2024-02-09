@@ -1,0 +1,61 @@
+.slider{
+    margin-top: 2em;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    margin: 2em auto;
+}
+.slides{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+.slide{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+.manual-navigation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    justify-content: center;
+}
+.manual-btn{
+    /* colocar branco dps */
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 6px;
+}
+.manual-btn:hover{
+    background-color: #a7a7a7;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .second{
+    margin-left: -20%;
+}
+#radio3:checked ~ .third{
+    margin-left: -40%;
+}
+#radio4:checked ~ .fourth{
+    margin-left: -60%;
+}
+#radio5:checked ~ .fifth{
+    margin-left: -80%;
+}
