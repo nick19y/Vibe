@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <script src="js/products.js" defer></script> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/productRegistration.css">
     <script src="js/productRegistration.js" defer></script>
-    <style>
-        body{
-            background-color: rgb(77, 98, 255);
-        }
-    </style>
 </head>
 <body>
+    <div class="title">
+        <h1 class="brand-title">VIBE</h1>
+    </div>
+    <h1 class="register-title">Cadastro de produtos</h1>
     <form action="" class="add-product-form">
-        <input type="text" placeholder="nome" class="product-name">
-        <input type="number" placeholder="preço" class="product-price">
-        <button type="submit">Adicionar produto</button>
-        <label for="input-file">update</label>
+        <input type="text" placeholder="Nome" class="register-input product-name">
+        <input type="number" placeholder="Preço" class="register-input product-price">
+        <input type="text" placeholder="Categoria" class="register-input product-category">
+        <label for="input-file">Imagem</label>
         <input type="file" accept="image/jpeg , image/png, image/jpg" id="input-file">
+        <div class="intput-register-btn">
+            <button class="register-product-btn" type="submit">Adicionar produto</button>
+        </div>
     </form>
 
 

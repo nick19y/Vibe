@@ -1,7 +1,13 @@
 const formAddProduct = document.querySelector(".add-product-form");
 const inputName = document.querySelector(".product-name");
 const inputPrice = document.querySelector(".product-price");
+const inputCategory = document.querySelector(".product-category");
 const products = JSON.parse(localStorage.getItem('products')) || [];
+const tShirt = JSON.parse(localStorage.getItem('products')) || [];
+const pants = JSON.parse(localStorage.getItem('products')) || [];
+const underwear = JSON.parse(localStorage.getItem('products')) || [];
+const accessories = JSON.parse(localStorage.getItem('products')) || [];
+const shoes = JSON.parse(localStorage.getItem('products')) || [];
 
 
 let profilePic = document.getElementById("profile-pic");
@@ -36,8 +42,35 @@ formAddProduct.addEventListener("submit", (event)=>{
     const product={
         name: inputName.value,
         price: inputPrice.value,
+        category: inputCategory.value,
         img: localStorage.getItem("recent-image"),
     }
+    switch (product.category) {
+        case "camiseta" || "CAMISETA" || "Camiseta" || "camisa" || "CAMISA", "Camisa":
+            tShirt.push(product);
+            localStorage.setItem('tShirt', JSON.stringify(tShirt));
+            break;
+        case "calça" || "CALÇA" || "Calça":
+            pants.push(product);
+            localStorage.setItem('pants', JSON.stringify(pants));
+            break;
+        case "sapato" || "tênis" || "SAPATO" || "TÊNIS" || "Sapato" || "Tênis":
+            shoes.push(product);
+            localStorage.setItem('shoes', JSON.stringify(shoes));
+            break;
+        case "acessórios" || "acessório" || "ACESSÓRIOS" || "ACESSÓRIO" || "Acessórios" || "Acessório":
+            accessories.push(product);
+            localStorage.setItem('accessories', JSON.stringify(accessories));
+            break;
+        case "underwear" || "UNDERWEAR" || "Underwear":
+            underwear.push(product);
+            localStorage.setItem('underwear', JSON.stringify(underwear));
+            break;
+        default:
+            console.log("Categoria inválida");
+          break;
+      }
+      
     products.push(product);
     localStorage.setItem('products', JSON.stringify(products));
     location.reload();
