@@ -1,4 +1,5 @@
 const productsShoppingCart = JSON.parse(localStorage.getItem('productsShoppingCart')) || [];
+const totalPrice = document.querySelector(".total-price");
 
 let productsList = document.querySelector(".item-list-li");
 function createShoppingCartElement(product){
@@ -24,12 +25,14 @@ function createShoppingCartElement(product){
         `
 }
 let shoppingCart = document.querySelector('.shopping-cart');
-
 shoppingCart.addEventListener('click', ()=>{
+    purchasePrice = 0;
     productsList.innerHTML="";
     productsShoppingCart.forEach(product=>{
         createShoppingCartElement(product);
-    })     
+        purchasePrice+=parseFloat(product.price);
+    })
+    totalPrice.innerText = "Total: R$" + purchasePrice;
 })
 
 const sendOrderBtn = document.querySelector(".send-order");

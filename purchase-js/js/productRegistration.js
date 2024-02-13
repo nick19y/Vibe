@@ -46,25 +46,25 @@ formAddProduct.addEventListener("submit", (event)=>{
         img: localStorage.getItem("recent-image"),
     }
     switch (product.category) {
-        case "camiseta" || "CAMISETA" || "Camiseta" || "camisa" || "CAMISA", "Camisa":
+        case "camiseta" || "CAMISETA" || "Camiseta" || "camisa" || "CAMISA"|| "Camisa":
             tShirt.push(product);
-            localStorage.setItem('tShirt', JSON.stringify(tShirt));
+            // localStorage.setItem('tShirt', JSON.stringify(tShirt));
             break;
         case "calça" || "CALÇA" || "Calça":
             pants.push(product);
-            localStorage.setItem('pants', JSON.stringify(pants));
+            // localStorage.setItem('pants', JSON.stringify(pants));
             break;
         case "sapato" || "tênis" || "SAPATO" || "TÊNIS" || "Sapato" || "Tênis":
             shoes.push(product);
-            localStorage.setItem('shoes', JSON.stringify(shoes));
+            // localStorage.setItem('shoes', JSON.stringify(shoes));
             break;
         case "acessórios" || "acessório" || "ACESSÓRIOS" || "ACESSÓRIO" || "Acessórios" || "Acessório":
             accessories.push(product);
-            localStorage.setItem('accessories', JSON.stringify(accessories));
+            // localStorage.setItem('accessories', JSON.stringify(accessories));
             break;
         case "underwear" || "UNDERWEAR" || "Underwear":
             underwear.push(product);
-            localStorage.setItem('underwear', JSON.stringify(underwear));
+            // localStorage.setItem('underwear', JSON.stringify(underwear));
             break;
         default:
             console.log("Categoria inválida");

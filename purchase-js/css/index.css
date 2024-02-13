@@ -18,7 +18,7 @@
     border: 1px solid black;
     border-radius: 5px;
     margin: 2em;
-    height: 300px;
+    /* height: 300px; colocar altura fixa no desktop */
     width: 220px;
 }
 .categories{
@@ -33,6 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .li-img{
     display: flex;
@@ -45,6 +46,19 @@
 .categories-link{
     color: black;
     font-size: 14px;
+}
+.product-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.purchase-btn{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
 }
 @media screen and (min-width:660px){
     .productArea{
