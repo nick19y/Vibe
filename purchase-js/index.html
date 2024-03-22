@@ -1,121 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/header.css">  
+    <link rel="stylesheet" href="css/productRegistration.css">
     <script src="js/index.js" defer></script>
-    <script src="js/shopping-cart.js"defer></script>
-    <script src="js/hamburguer-menu.js" defer></script>
 </head>
 <body>
-    <div class="models">
-        <div class="products">
-            <div class="product">
-                <img src="" alt="">
-                <div class="product-details">
-                    <div class="name"></div>
-                    <div class="price"></div>
-                    <button class="purchase-btn">Adicionar ao carrinho</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <aside class="shopping-list">
-        <img src="img/close-btn (2).png" alt="" class="close-btn-shopping-cart">
-        <ul class="shopping-list-ul">
-            <div class="item-list-li">
-            </div>
-        </ul>
-        <div class="purchase-price">
-            <div class="total-price"></div>
-        </div>
-        <div class="btn-purchase">
-            <button class="send-order">Enviar Pedido</button>
-        </div>
-    </aside>
-    
-    <aside>
-        <nav>
-            <ul class="nav-list">
-                <div class="links">
-                    <img src="img/close-btn (2).png" alt="" class="close-btn-nav-list">
-                    <li><a href="profile.html">Conta</a></li>
-                    <li><a href="best-sellers.html">Mais vendidos</a></li>
-                    <li><a href="offers.html">Ofertas</a></li>
-                    <li><a href="">Novidades</a></li>
-                    <li><a href="productRegistration.html">Cadastrar Produtos</a></li>
-                    <!-- <li><a href="">Sugestões colocar no atendimento ao cliente</a></li> -->
-                </div>
-            </ul>
-        </nav>
-    </aside>
     <header>
-        <div class="menu">
-            <img src="img/hamburguer-menu.png" alt="">
-        </div>
         <div class="title">
             <h1 class="brand-title">VIBE</h1>
-            <h3>Urban Moda</h3>
-        </div>
-        <div class="shopping-cart">
-            <img src="img/shopping-cart.png" alt="" class="shopping-cart-img">
         </div>
     </header>
-    
     <main>
-        <div class="categories">
-            <li class="categories-item">
-                <a class="categories-link" href="accessory.html">
-                    Acessórios
-                    <div class="li-img">
-                        <img src="img/diamond.png" alt="">
-                    </div>
-                </a>
-            </li>
-            <li class="categories-item">
-                <a class="categories-link" href="pants.html">
-                    Calças
-                    <div class="li-img">
-                        <img src="img/pants.png" alt="">
-                    </div>
-                </a>
-            </li>
-            <li class="categories-item">
-                <a class="categories-link" href="tShirt.html">
-                    Camisas
-                    <div class="li-img">
-                        <img src="img/shirt.png" alt="">
-                    </div>
-                </a>
-            </li>
-            <li class="categories-item">
-                <a class="categories-link" href="shoes.html">
-                    Sapatos
-                    <div class="li-img">
-                        <img src="img/sport-shoe.png" alt="">
-                    </div>
-                </a>
-            </li>
-            <li class="categories-item">
-                <a class="categories-link" href="underwear.html">
-                    Underwear
-                    <div class="li-img">
-                        <img src="img/underwear.png" alt="">
-                    </div>
-                </a>
-            </li>
-        </div>
-        <div class="productArea"></div>
+        <form action="#" class="form-index">
+            <label for="email">Email:</label>
+            <input class="input-index" placeholder="Digite o seu email" type="text" id="email">
+            <label for="password">Senha:</label>
+            <input class="input-index" placeholder="Digite a sua senha" type="password" id="password">
+            <div class="index-btn">
+                <button type="button" class="btn">Entrar</button>
+            </div>
+            <p>Não tem uma conta ainda? <a href="createAccount.html">Cadastre-se!</a></p>
+            </form>
     </main>
-    <a href="createAccount.html">Criar conta</a>
-    <a href="login.html">Login</a>
-    <button class="exit-btn">Sair</button>
-</main>
-<footer></footer>
 </body>
 </html>

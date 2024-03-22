@@ -14,6 +14,6 @@ formCreateAccount.addEventListener("submit", (event)=>{
     }
     users.push(user);
     localStorage.setItem("user", JSON.stringify(users));
-    window.open("login.html", "_self");
+    window.open("index.html", "_self");
 })
 

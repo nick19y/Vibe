@@ -1,21 +1,30 @@
-const products = JSON.parse(localStorage.getItem('products')) || [];
-const productsHtml = document.querySelector(".products");
+const formindex = document.querySelector(".form-index");
+const userEmail = document.getElementById("email");
+const userPassword = document.getElementById("password");
+const btnTeste = document.querySelector(".btn");
+const users = JSON.parse(localStorage.getItem("user"));
 
-products.map((item)=>{
-    let productItem = document.querySelector('.models .products .product').cloneNode(true);
-    document.querySelector('.productArea').append(productItem);
-    productItem.querySelector('.product img').src = item.img;
-    productItem.querySelector('.product .name').innerHTML = item.name;
-    productItem.querySelector('.product .price').innerHTML =  `R$ ${item.price}`;
+// usar session storage
+console.log(users)
+users.forEach((user) =>console.log(user))
+function checkUser(){
+    userEmailindex = userEmail.value;
+    userPasswordindex = userPassword.value;
+    users.forEach((user) =>{
+        if(userEmailindex == user.email && userPasswordindex == user.password){
+            sessionStorage.setItem("logged-user", JSON.stringify(user));
+            window.open('main.html', '_self');
+            console.log(user);
+        }
+        else{
+            document.write("Senha incorreta");
+            return;
+            // FAZER TRATAMENTO COM ID 
+        }
+    })
+}
 
-    productItem.querySelector(".product .purchase-btn").addEventListener('click', ()=>{
-        productsShoppingCart.push(item);
-        localStorage.setItem('productsShoppingCart', JSON.stringify(productsShoppingCart));
-    })  
-})
-
-let exitBtn = document.querySelector(".exit-btn")
-exitBtn.addEventListener("click", ()=>{
-    sessionStorage.removeItem("logged-user")
-    window.open("login.html", "_self");
+btnTeste.addEventListener("click", ()=>{
+    checkUser();
+    // window.open('main.html', '_self');
 })
