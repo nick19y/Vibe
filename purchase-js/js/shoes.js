@@ -1,11 +1,10 @@
 const products = JSON.parse(localStorage.getItem('products')) || [];
 const productsHtml = document.querySelector(".products");
-
 if(products==0){
     document.querySelector('.productArea').innerHTML=
     `
     <div class="msg-no-product">
-        <div class="message">
+    <div class="message">
             <h2 class="msg">Não há qualquer produto cadastrado para esta página...</h2>
             <h2>
                 <a href="productRegistration.html">Cadastre aqui!</a>
@@ -14,8 +13,8 @@ if(products==0){
     </div>`        
 }
 
+categories = ["sapato", "tênis", "SAPATO", "TÊNIS", "Sapato", "Tênis"];
 products.map((item)=>{
-    categories = ["sapato", "tênis", "SAPATO", "TÊNIS", "Sapato", "Tênis"];
     if(categories.some(cat=>item.category.includes(cat))){
         let productItem = document.querySelector('.models .products .product').cloneNode(true);
         document.querySelector('.productArea').append(productItem);
@@ -27,17 +26,5 @@ products.map((item)=>{
             productsShoppingCart.push(item);
             localStorage.setItem('productsShoppingCart', JSON.stringify(productsShoppingCart));
         })  
-    }
-    else{
-        document.querySelector('.productArea').innerHTML=
-        `
-        <div class="msg-no-product">
-            <div class="message">
-                <h2 class="msg">Não há qualquer produto cadastrado para esta página...</h2>
-                <h2>
-                    <a href="productRegistration.html">Cadastre aqui!</a>
-                </h2>
-            </div>
-        </div>`        
     }
 })

@@ -28,16 +28,4 @@ products.map((item)=>{
             localStorage.setItem('productsShoppingCart', JSON.stringify(productsShoppingCart));
         })  
     }
-    else{
-        document.querySelector('.productArea').innerHTML=
-        `
-        <div class="msg-no-product">
-            <div class="message">
-                <h2 class="msg">Não há qualquer produto cadastrado para esta página...</h2>
-                <h2>
-                    <a href="productRegistration.html">Cadastre aqui!</a>
-                </h2>
-            </div>
-        </div>`        
-    }
 })
